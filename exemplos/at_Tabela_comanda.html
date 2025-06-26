@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Formulário Comanda</title>
+  <link rel="stylesheet" type="text/css" href="../exemplos/css/estilo.css" media="all"/>
+  
+</head>
+<body>
+  <header>
+    <span id="menu-btn" class="menu-icon">&#9776;</span>
+    <img src="img/logo.png" title="Logo da Padaria">
+    <!-- Apenas UM ID sidebar -->
+    <div id="sidebar" class="sidebar">
+        </div>
+    </header>
+  <h1>Formulário Comanda</h1>
+  <br><br>
+  <form>
+    <table border="1" align="center" width="40%" cellspacing="0" cellpadding="5">
+      
+      <tr>
+        <td colspan="2" align="center">
+          <img src="imagem/logo_pg.png" alt="Logo da Padaria" width="110">
+        </td>
+       <td colspan="6" align="center">
+            <font size="6"><b>Padaria Pão Genial</b></font>
+        </td>
+      </tr>
+      <tr>       
+        <th>Número de Comanda</th>    
+        <th>Id do Produto</th>
+        <th>Categoria</th>
+        <th>Nome</th>
+        <th>Quantidade</th>
+        <th>Preço</th>
+        <th>Unidade</th>
+      </tr>
+
+      <tr>
+       
+        <td align="center"><input type="text" placeholder="Ex:1"></td>
+        <td align="center">
+        <select name="categoria_produto">
+          <option value="paes">Pães</option>
+          <option value="bolos">Bolos e Tortas</option>
+          <option value="doces" selected>Doces</option>
+          <option value="bebidas">Bebidas</option>
+          <option value="salgados">Salgados</option>
+          <option value="sanduíches">Sanduíches</option>
+        </select></td>
+      </td>
+       <td align="center"><input type="text" placeholder="Insira o Nome do produto"></td>
+        <td align="center"><input type="text" placeholder="Insira o Nome do produto"></td>
+        <td align="center"><input type="text" placeholder="Ex: 4"></td>
+        <td align="center"><input type="text" placeholder="Ex: R$9,99"></td>
+         <td align="center">
+        <select name="categoria_produto">
+          <option value="paes">Un</option>
+          <option value="bolos">Kg</option>
+        </select></td>
+      </tr>
+    </table>
+      <br><br>
+                <button type="submit">Enviar</button>
+                <button type="reset">Limpar</button>
+  </form>
+  <br><br>
+   <address>
+        <center>Maite López / Estudante / Técnico Desenvolvimento de Sistemas</center>
+    </address>
+</body>
+</html>
