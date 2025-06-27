@@ -241,3 +241,56 @@ header {
     background-color: #000;
     color:white;
   }
+
+          ul{
+            list-style-type: none;/*Tiro as bolinhas padrão*/
+            margin: 0px;/*Remove espaçamentos*/
+            padding: 0px;/*Remove espaçamentos*/
+            overflow: hidden;/*Evita que o conteúdo ultrapasse o tamanho da caixa*/
+            background-color: black;/*Define a cor de fundo*/
+        }
+
+        li{
+            float: left;/*O itens vão ficar um do lado do outro, tipo menu horizontal*/
+        }
+
+        li a, dropbtn{
+            display: inline-block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        li a:hover, .dropdown:hover .dropbtn {
+            background-color: #c133ff;
+        }
+
+
+        li .dropdown{
+            display: inline-block;
+        }
+
+        .dropdown-content{
+            display: none;
+            position: absolute;
+            background-color: purple;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px(0,0,0,0,2);
+        }
+
+        .dropdown-content a{
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            text-align: left;
+        }
+
+        .dropdown:content, a:hover{
+            background-color: pink;
+        }
+
+        .dropdown:hover .dropdown-content{
+            display: block;
+        }

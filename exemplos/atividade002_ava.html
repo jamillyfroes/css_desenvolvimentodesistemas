@@ -4,99 +4,165 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Atividade 02</title>
-    <link rel="stylesheet" type="text/css" href="../atividades_html/css/styleFormFunc.css">
+    <link rel="stylesheet" type="text/css" href="../exemplos/css/styleFormFunc.css">
 </head>
 <body>
-    <header>
-        <span id="menu-btn" class="menu-icon">&#9776;</span>
-        <img src="img/logo.png" title="Logo da Padaria">
-        <div id="sidebar" class="sidebar">
-      </header>
-    <h1 align="center">Formulário de Cadastro- Funcionário</h1>
+<header>
+  <img src="img/logo.png" title="Logo da Padaria" alt="Logo da Padaria">
+  <nav>
+    <ul class="menu">
+      <li><a href="../exemplos/exemplomenucss.html">Início</a></li>
+     <!-- <li><a href="../exemplos/atividade002_ava.html">Cadastrar Funcionários- Jamilly</a></li>-->
+      <li class="dropdown">
+        <a href="#" class="dropbtn">DropDown- Jamilly</a>
+        <ul class="dropdown-content">
+          <li><a href="../exemplos/atividade.SA.html">Cadastrar Produto- Jamilly</a></li>
+          <li><a href="../exemplos/AT_Tabela_Formulário_Fornecedor.html">Cadastrar Fornecedor- Jamilly</a></li>
+          <li><a href="../exemplos/at_Tabela_comanda.html">Comanda- Jamilly</a></li>
+        </ul>
+      </li>
+    </ul>
+  </nav>
+</header>
     <form class="formulario-cadastro" method="post" action="#Jamilly">
     <table class="retangulo" cellspacing="0" cellpadding="5" align="center">
         <tr>
-            <td rowspan="2" align="center"><img src="../atividades_html/img/logo.png" height="80" width="80"></td>  
+            <td rowspan="2" align="center"><img src="img/logo.png" height="80" width="80"></td>  
         </tr>
         <tr>
         <th align="center">Padaria Pão Genial</th>
         </tr>
         <tr>
-            <th align="center"><img src="../atividades_html/img/funcionario.png" width="13" height="13"><label>Nome do Funcionário:</label></th>
+            <th align="center">
+                <div class="th-label">
+                    <img src="img/funcionario.png" alt="Funcionário">
+                    <span>Nome do Funcionário:</span>
+                </div>
+            </th>
             <td><input type="text" name="nome_func" placeholder="Insira o nome"></td>
         </tr>
         <tr>
-            <th align="center"><img src="../atividades_html/img/cpf.jpg" width="13" height="13"><label>CPF:</label></th>
-            <td ><input type="text" name="cpf_func" maxlength="11" placeholder="Insira o cpf(somente números)"></td>
+            <th align="center">
+                <div class="th-label">
+                    <img src="img/cpf.jpg" alt="CPF">
+                    <span>CPF:</span>
+                </div>
+            </th>
+            <td><input type="text" name="cpf_func" maxlength="11" placeholder="Insira o CPF (somente números)"></td>
         </tr>
         <tr>
-            <th align="center"><img src="../atividades_html/img/senha.png" width="13" height="13"><label>Senha:</label></th>
-            <td><input type="password"  name="senha_func"  maxlength="8" placeholder="Insira a senha"></td>
+            <th align="center">
+                <div class="th-label">
+                    <img src="img/senha.png" alt="Senha">
+                    <span>Senha:</span>
+                </div>
+            </th>
+            <td><input type="password" name="senha_func" maxlength="8" placeholder="Insira a senha"></td>
         </tr>
         <tr>
-            <th align="center"><img src="../atividades_html/img/email.png" width="13" height="13"><label>E-mail:</label></th>
+            <th align="center">
+                <div class="th-label">
+                    <img src="img/email.png" alt="Email">
+                    <span>E-mail:</span>
+                </div>
+            </th>
             <td><input type="email" name="email_func" placeholder="Insira o e-mail"></td>
         </tr>
         <tr>
-            <th align="center"><img src="../atividades_html/img/telefone.png" width="13" height="13"><label>Telefone:</label></th>
+            <th align="center">
+                <div class="th-label">
+                    <img src="img/telefone.png" alt="Telefone">
+                    <span>Telefone:</span>
+                </div>
+            </th>
             <td><input type="tel" name="telefone_func" placeholder="Insira o telefone"></td>
         </tr>
         <tr>
-            <th align="center"><img src="../atividades_html/img/rua.png" width="13" height="13"><label>Rua:</label></th>
+            <th align="center">
+                <div class="th-label">
+                    <img src="img/rua.png" alt="Rua">
+                    <span>Rua:</span>
+                </div>
+            </th>
             <td><input type="text" name="rua_func" placeholder="Insira o nome da rua"></td>
         </tr>
         <tr>
-            <th align="center"><img src="../atividades_html/img/numero.png" width="13" height="13"><label>Número:</label></th>
+            <th align="center">
+                <div class="th-label">
+                    <img src="img/numero.png" alt="Número">
+                    <span>Número:</span>
+                </div>
+            </th>
             <td><input type="text" name="numero_func" placeholder="Insira o número"></td>
         </tr>
         <tr>
-            <th align="center"><img src="../atividades_html/img/bairro.png" width="13" height="13"><label>Bairro:</label></th>
+            <th align="center">
+                <div class="th-label">
+                    <img src="img/bairro.png" alt="Bairro">
+                    <span>Bairro:</span>
+                </div>
+            </th>
             <td><input type="text" name="bairro_func" placeholder="Insira o nome do bairro"></td>
         </tr>
         <tr>
-            <th align="center"><img src="../atividades_html/img/cidade.png" width="13" height="13"><label>Cidade:</label></th>
+            <th align="center">
+                <div class="th-label">
+                    <img src="img/cidade.png" alt="Cidade">
+                    <span>Cidade:</span>
+                </div>
+            </th>
             <td><input type="text" name="cidade_func" placeholder="Insira o nome da cidade"></td>
         </tr>
         <tr>
-            <th align="center"><img src="../atividades_html/img/uf.png" width="13" height="13"><label>UF:</label></th>
+            <th align="center">
+                <div class="th-label">
+                    <img src="img/uf.png" alt="UF">
+                    <span>UF:</span>
+                </div>
+            </th>
             <td>
                 <select name="uf_func">
-                <option value="" disabled selected>Selecione o estado</option>
-                <option value="AC">Acre (AC)</option>
-                <option value="AL">Alagoas (AL)</option>
-                <option value="AP">Amapá (AP)</option>
-                <option value="AM">Amazonas (AM)</option>
-                <option value="BA">Bahia (BA)</option>
-                <option value="CE">Ceará (CE)</option>
-                <option value="DF">Distrito Federal (DF)</option>
-                <option value="ES">Espírito Santo (ES)</option>
-                <option value="GO">Goiás (GO)</option>
-                <option value="MA">Maranhão (MA)</option>
-                <option value="MT">Mato Grosso (MT)</option>
-                <option value="MS">Mato Grosso do Sul (MS)</option>
-                <option value="MG">Minas Gerais (MG)</option>
-                <option value="PA">Pará (PA)</option>
-                <option value="PB">Paraíba (PB)</option>
-                <option value="PR">Paraná (PR)</option>
-                <option value="PE">Pernambuco (PE)</option>
-                <option value="PI">Piauí (PI)</option>
-                <option value="RJ">Rio de Janeiro (RJ)</option>
-                <option value="RN">Rio Grande do Norte (RN)</option>
-                <option value="RS">Rio Grande do Sul (RS)</option>
-                <option value="RO">Rondônia (RO)</option>
-                <option value="RR">Roraima (RR)</option>
-                <option value="SC">Santa Catarina (SC)</option>
-                <option value="SP">São Paulo (SP)</option>
-                <option value="SE">Sergipe (SE)</option>
-                <option value="TO">Tocantins (TO)</option>
-            </select>
-        </td>
+                    <option value="" disabled selected>Selecione o estado</option>
+                    <option value="AC">Acre (AC)</option>
+                    <option value="AL">Alagoas (AL)</option>
+                    <option value="AP">Amapá (AP)</option>
+                    <option value="AM">Amazonas (AM)</option>
+                    <option value="BA">Bahia (BA)</option>
+                    <option value="CE">Ceará (CE)</option>
+                    <option value="DF">Distrito Federal (DF)</option>
+                    <option value="ES">Espírito Santo (ES)</option>
+                    <option value="GO">Goiás (GO)</option>
+                    <option value="MA">Maranhão (MA)</option>
+                    <option value="MT">Mato Grosso (MT)</option>
+                    <option value="MS">Mato Grosso do Sul (MS)</option>
+                    <option value="MG">Minas Gerais (MG)</option>
+                    <option value="PA">Pará (PA)</option>
+                    <option value="PB">Paraíba (PB)</option>
+                    <option value="PR">Paraná (PR)</option>
+                    <option value="PE">Pernambuco (PE)</option>
+                    <option value="PI">Piauí (PI)</option>
+                    <option value="RJ">Rio de Janeiro (RJ)</option>
+                    <option value="RN">Rio Grande do Norte (RN)</option>
+                    <option value="RS">Rio Grande do Sul (RS)</option>
+                    <option value="RO">Rondônia (RO)</option>
+                    <option value="RR">Roraima (RR)</option>
+                    <option value="SC">Santa Catarina (SC)</option>
+                    <option value="SP">São Paulo (SP)</option>
+                    <option value="SE">Sergipe (SE)</option>
+                    <option value="TO">Tocantins (TO)</option>
+                </select>
+            </td>
         </tr>
         <tr>
-            <th align="center"><img src="../atividades_html/img/funcao.png" width="13" height="13"><label>Função</label></th>
-            <td>           
+            <th align="center">
+                <div class="th-label">
+                    <img src="img/funcao.png" alt="Função">
+                    <span>Função:</span>
+                </div>
+            </th>
+            <td>
                 <select name="funcao_func">
-                    <option value="" disabled selected>Selecione o função</option>
+                    <option value="" disabled selected>Selecione a função</option>
                     <option>Administrador</option>
                     <option>Balconista</option>
                     <option>Gestor de Estoque</option>
@@ -105,15 +171,25 @@
             </td>
         </tr>
         <tr>
-            <th align="center"><img src="../atividades_html/img/dataadmissao.png" width="13" height="13"><label>Data de Admissão:</label></th>
+            <th align="center">
+                <div class="th-label">
+                    <img src="img/dataadmissao.png" alt="Data de Admissão">
+                    <span>Data de Admissão:</span>
+                </div>
+            </th>
             <td><input type="date" name="dataadmissao_func" placeholder="Insira a data de admissão"></td>
         </tr>
         <tr>
-            <th align="center"><img src="../atividades_html/img/salario.png" width="13" height="13"><label>Salário:</label></th>
+            <th align="center">
+                <div class="th-label">
+                    <img src="img/salario.png" alt="Salário">
+                    <span>Salário:</span>
+                </div>
+            </th>
             <td><input type="number" name="salario_func" step="0.01" min="0" placeholder="Insira o salário"></td>
         </tr>
-        <tr>
-            <td colspan="2" align="center"><input type="submit" value="Cadastrar"/></td>
+        <tr> 
+            <td colspan="2" align="center"><button type="submit" class="btn-cadastrar">Cadastrar</button></td>
         </tr>
     </form>
     </table>
