@@ -1,0 +1,10 @@
+body {
+    background-color: red;
+}
+.container {
+    background-color: white;
+    padding-top: 500px;
+    position:absolute;
+    align-items: center;
+    align-content: center;
+}

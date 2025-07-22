@@ -1,5 +1,5 @@
 <?php
-    if(isset($_post['nome_func'])&& isset($_post['cpf_func'])&& isset($_post['senha_func'])&& isset($_post['email_func'])&& isset($_post['telefone_func'])&& isset($_post['rua_func'])&& isset($_post['numero_func'])&& isset($_post['bairro_func'])&& isset($_post['cidade_func'])&& isset($_post['uf_func'])&& isset($_post['funcao_func'])&& isset($_post['dataadmissao_func'])&& isset($_post['salario_func'])){
+    if(isset($_post['nome_func'])&& isset($_post['cpf_func'])&& isset($_post['senha_func'])&& isset($_post['email_func'])&& isset($_post['telefone_func'])&& isset($_post['rua_func'])&& isset($_post['numero_func'])&& isset($_post['bairro_func'])&& isset($_post['cidade_func'])&& isset($_post['dataadmissao_func'])&& isset($_post['salario_func'])){
         echo "Dados do funcionário recebidos:<br>";
         echo "Nome: " . $_post['nome_func'] . "<br>";
         echo "CPF: " . $_post['cpf_func'] . "<br>";
