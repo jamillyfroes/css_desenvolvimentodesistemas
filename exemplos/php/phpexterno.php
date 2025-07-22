@@ -1,18 +1,27 @@
 <?php
-    if(isset($_post['nome_func'])&& isset($_post['cpf_func'])&& isset($_post['senha_func'])&& isset($_post['email_func'])&& isset($_post['telefone_func'])&& isset($_post['rua_func'])&& isset($_post['numero_func'])&& isset($_post['bairro_func'])&& isset($_post['cidade_func'])&& isset($_post['dataadmissao_func'])&& isset($_post['salario_func'])){
+    if (
+        isset($_POST['nome_func']) && isset($_POST['cpf_func']) && isset($_POST['senha_func']) &&
+        isset($_POST['email_func']) && isset($_POST['telefone_func']) && isset($_POST['rua_func']) &&
+        isset($_POST['numero_func']) && isset($_POST['bairro_func']) && isset($_POST['cidade_func']) &&
+        isset($_POST['uf_func']) && isset($_POST['funcao_func']) &&
+        isset($_POST['dataadmissao_func']) && isset($_POST['salario_func'])
+    ) {
+        // Exibindo os dados recebidos
         echo "Dados do funcionário recebidos:<br>";
-        echo "Nome: " . $_post['nome_func'] . "<br>";
-        echo "CPF: " . $_post['cpf_func'] . "<br>";
-        echo "Senha: " . $_post['senha_func'] . "<br>";
-        echo "Email: " . $_post['email_func'] . "<br>";
-        echo "Telefone: " . $_post['telefone_func'] . "<br>";
-        echo "Rua: " . $_post['rua_func'] . "<br>";
-        echo "Número: " . $_post['numero_func'] . "<br>";
-        echo "Bairro: " . $_post['bairro_func'] . "<br>";
-        echo "Cidade: " . $_post['cidade_func'] . "<br>";
-        echo "UF: " . $_post['uf_func'] . "<br>";
-        echo "Função: " . $_post['funcao_func'] . "<br>";
-        echo "Data de Admissão: " . $_post['dataadmissao_func'] . "<br>";
-        echo "Salário: " . $_post['salario_func'] . "<br>";
+        echo "Nome: " . htmlspecialchars($_POST['nome_func']) . "<br>";
+        echo "CPF: " . htmlspecialchars($_POST['cpf_func']) . "<br>";
+        echo "Senha: " . htmlspecialchars($_POST['senha_func']) . "<br>";
+        echo "Email: " . htmlspecialchars($_POST['email_func']) . "<br>";
+        echo "Telefone: " . htmlspecialchars($_POST['telefone_func']) . "<br>";
+        echo "Rua: " . htmlspecialchars($_POST['rua_func']) . "<br>";
+        echo "Número: " . htmlspecialchars($_POST['numero_func']) . "<br>";
+        echo "Bairro: " . htmlspecialchars($_POST['bairro_func']) . "<br>";
+        echo "Cidade: " . htmlspecialchars($_POST['cidade_func']) . "<br>";
+        echo "UF: " . htmlspecialchars($_POST['uf_func']) . "<br>";
+        echo "Função: " . htmlspecialchars($_POST['funcao_func']) . "<br>";
+        echo "Data de Admissão: " . htmlspecialchars($_POST['dataadmissao_func']) . "<br>";
+        echo "Salário: " . htmlspecialchars($_POST['salario_func']) . "<br>";
+    } else {
+        echo "Erro: Dados incompletos.";
     }
 ?>

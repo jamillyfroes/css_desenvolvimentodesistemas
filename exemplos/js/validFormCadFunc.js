@@ -1,22 +1,24 @@
 var formEl = document.querySelector(".formulario-cadastro");
 
-//CHAMA A FUNÇÃO CAPTURA_EVENTOS
-captura_eventos(formEl, 'submit', formValid);
+// Verifica se o formulário foi encontrado antes de continuar
+if (formEl) {
+    // Chama a função captura_eventos
+    captura_eventos(formEl, 'submit', formValid);
+} else {
+    console.error("Formulário com a classe 'formulario-cadastro' não encontrado.");
+}
 
-//FUNÇÃO PARA CAPTURAR EVENTOS
+// Função para capturar eventos
 function captura_eventos(objeto, evento, funcao) {
-    //Teste addEventListener
     if (objeto.addEventListener) {
         objeto.addEventListener(evento, funcao, true);
-    }
-    //Teste attachEvent
-    else if (objeto.attachEvent) {
+    } else if (objeto.attachEvent) {
         var eventoAttach = 'on' + evento;
         objeto.attachEvent(eventoAttach, funcao);
     }
 }
 
-//FUNÇÃO PARA CANCELAR EVENTOS
+// Função para cancelar eventos
 function cancela_evento(evento) {
     if (evento.preventDefault) {
         evento.preventDefault();
@@ -25,7 +27,7 @@ function cancela_evento(evento) {
     }
 }
 
-//FUNÇÃO QUE VERIFICA OS CAMPOS RADIO E CHECKBOX
+// Função que verifica os campos radio e checkbox
 function verificaCampos(campo, evento) {
     var checados = false;
     for (var i = 0; i < campo.length; i++) {
@@ -42,70 +44,71 @@ function verificaCampos(campo, evento) {
     return true;
 }
 
+// Função de validação do formulário
 function formValid(event) {
-    var campoNome = formEl.nome_func.value,
-        campoCPF = formEl.cpf_func.value,
-        campoSenha = formEl.senha_func.value,
-        campoEmail = formEl.email_func.value,
-        campoTelefone = formEl.telefone_func.value,
-        campoRua = formEl.rua_func.value,
-        campoNumero = formEl.numero_func.value,
-        campoBairro = formEl.bairro_func.value,
-        campoCidade = formEl.cidade_func.value,
+    var campoNome = formEl.nome_func.value.trim(),
+        campoCPF = formEl.cpf_func.value.trim(),
+        campoSenha = formEl.senha_func.value.trim(),
+        campoEmail = formEl.email_func.value.trim(),
+        campoTelefone = formEl.telefone_func.value.trim(),
+        campoRua = formEl.rua_func.value.trim(),
+        campoNumero = formEl.numero_func.value.trim(),
+        campoBairro = formEl.bairro_func.value.trim(),
+        campoCidade = formEl.cidade_func.value.trim(),
         campoUF = formEl.uf_func.value,
         campoFuncao = formEl.funcao_func.value,
-        campoDataAdmissao = formEl.dataadmissao_func.value,
-        campoSalario = formEl.salario_func.value;
+        campoDataAdmissao = formEl.dataadmissao_func.value.trim(),
+        campoSalario = parseFloat(formEl.salario_func.value);
 
-    if (campoNome.length == 0) {
+    if (campoNome.length === 0) {
         alert("O campo Nome é obrigatório");
         cancela_evento(event);
         return false;
     }
 
-    if (campoCPF.length != 11) {
-        alert("O CPF deve conter 11 dígitos");
+    if (campoCPF.length !== 11 || isNaN(campoCPF)) {
+        alert("O CPF deve conter 11 dígitos numéricos");
         cancela_evento(event);
         return false;
     }
 
-    if (campoSenha.length == 0) {
+    if (campoSenha.length === 0) {
         alert("O campo Senha é obrigatório");
         cancela_evento(event);
         return false;
     }
 
-    if (campoEmail.length == 0) {
+    if (campoEmail.length === 0) {
         alert("O campo Email é obrigatório");
         cancela_evento(event);
         return false;
     }
 
-    if (campoTelefone.length == 0) {
+    if (campoTelefone.length === 0) {
         alert("O campo Telefone é obrigatório");
         cancela_evento(event);
         return false;
     }
 
-    if (campoRua.length == 0) {
+    if (campoRua.length === 0) {
         alert("O campo Rua é obrigatório");
         cancela_evento(event);
         return false;
     }
 
-    if (campoNumero.length == 0) {
+    if (campoNumero.length === 0) {
         alert("O campo Número é obrigatório");
         cancela_evento(event);
         return false;
     }
 
-    if (campoBairro.length == 0) {
+    if (campoBairro.length === 0) {
         alert("O campo Bairro é obrigatório");
         cancela_evento(event);
         return false;
     }
 
-    if (campoCidade.length == 0) {
+    if (campoCidade.length === 0) {
         alert("O campo Cidade é obrigatório");
         cancela_evento(event);
         return false;
@@ -123,28 +126,19 @@ function formValid(event) {
         return false;
     }
 
-    if (campoDataAdmissao.length == 0) {
+    if (campoDataAdmissao.length === 0) {
         alert("O campo Data de Admissão é obrigatório");
         cancela_evento(event);
         return false;
     }
 
-    if (campoSalario <= 0) {
-        alert("O campo Salário deve ser maior que zero");
+    if (isNaN(campoSalario) || campoSalario <= 0) {
+        alert("O campo Salário deve ser um número maior que zero");
         cancela_evento(event);
         return false;
     }
 
-    if (campoDataAdmissao.length == 0) {
-        alert("O campo Data de Admissão é obrigatório");
-        cancela_evento(event);
-        return false;
-    }
-
-    if (campoSalario <= 0) {
-        alert("O campo Salário deve ser maior que zero");
-        cancela_evento(event);
-        return false;
-    }
-
+    // Se tudo estiver válido
+    alert("Formulário enviado com sucesso!");
+    return true;
 }
